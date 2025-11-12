@@ -1,0 +1,225 @@
+const memes = [
+  {
+    id: 3,
+    title: "",
+    category: "Campus Life",
+    // Drake Hotline Bling
+    img: "https://api.memegen.link/images/drake/KU_Chapo_Day/UoN_Menu.png",
+  },
+  {
+    id: 4,
+    title: "",
+    category: "Matatu",
+    // Roll Safe (Man pointing to head)
+    img: "https://api.memegen.link/images/rollsafe/matatu_dj_at_6am/volume_maxed_out.png",
+  },
+
+  {
+    id: 6,
+    title: "",
+    category: "Exam Season",
+    // Gru's Plan
+    img: "https://api.memegen.link/images/gru/thinks_ready_for_exam/sees_the_timetable/panics.png",
+  },
+  {
+    id: 7,
+    title: "",
+    category: "Love Life/Dating",
+    // Awkward Moment Seal
+    img: "https://api.memegen.link/images/awkward/when_she_says_not_hungry/eats_half_my_fries.png",
+  },
+  {
+    id: 8,
+    title: "",
+    category: "Family/Parents",
+    // Buzz Lightyear Everywhere
+    img: "https://api.memegen.link/images/buzz/kenyan_parents_at_8pm/switch_off_that_light.png",
+  },
+
+  {
+    id: 12,
+    title: "",
+    category: "Random/Weather",
+    // Spongebob Ight Imma Head Out
+    img: "data:image/jpeg;base64,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",
+  },
+  {
+    id: 13,
+    title: "",
+    category: "Finance/Debt",
+    // Philosoraptor
+    img: "https://api.memegen.link/images/philosoraptor/Borrow_500bob/Pay_600_after_3_days.png",
+  },
+  {
+    id: 14,
+    title: "",
+    category: "Campus Life",
+    // Gru's Plan (different version)
+    img: "https://api.memegen.link/images/gru/class_rep_says/class_cancelled/lecturer_shows_up.png",
+  },
+
+  {
+    id: 25,
+    title: "",
+    category: "Hustle/Work Life",
+    // Drake Hotline Bling
+    img: "https://api.memegen.link/images/drake/hi_from_landlord/not_today.png",
+  },
+
+  {
+    id: 27,
+    title: "",
+    category: "Culture/Events",
+    // Roll Safe
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZi3Gz_bIJuGTm_qwflq9N3PZ5fDmxFBwrUA&s",
+  },
+
+  {
+    id: 29,
+    title: "",
+    category: "KPLC/Power",
+    // Gru's Plan
+    img: "https://api.memegen.link/images/gru/kplc_promises_fix/power_out_again.png",
+  },
+
+  {
+    id: 32,
+    title: "",
+    category: "Family/Culture",
+    // Awkward Moment Seal
+    img: "https://api.memegen.link/images/awkward/diaspora_cousin_tries/to_use_okoa_jahazi.png",
+  },
+
+  {
+    id: 34,
+    title: "",
+    category: "Finance/Chama",
+    // Gru's Plan
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAsaZUZWiV1lzEd_1icdimqXsFlJignhT4zw&s",
+  },
+  {
+    id: 35,
+    title: "",
+    category: "Matatu/Corruption",
+    // Roll Safe
+    img: "https://api.memegen.link/images/rollsafe/says_it_was_traffic/gets_fined_anyway.png",
+  },
+
+  {
+    id: 38,
+    title: "",
+    category: "Culture/Events",
+    // Drake Hotline Bling
+    img: "data:image/png;base64,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",
+  },
+
+  {
+    id: 41,
+    title: "Mambo ni matatu: The KPLC notice/warning.",
+    category: "KPLC/Life",
+    // Template: The Office - Michael Scott, "No God, Please No!"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0gaW-JOB42i3xjhA8jTWzj-Py1k3JshDCg&s",
+  },
+  {
+    id: 42,
+    title: "When the pastor mentions tithe and offerings.",
+    category: "Church/Finance",
+    // Template: Hiding behind a tree
+    img: "https://i.imgflip.com/1bh9.jpg?alt=media&token=d1b32d2e-4340-4966-8809-54d92415170d",
+  },
+  {
+    id: 43,
+    title: "Buying groceries in shillings vs getting the receipt.",
+    category: "Economy/Inflation",
+    // Template: Disappointed Black Guy / What the hell is this
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQgsynmLMuC2FHmtvuEr9ERUnYAr0s3jHGug&s",
+  },
+  {
+    id: 44,
+    title: "Your friend who always insists on paying with Tapo.",
+    category: "Safaricom/Tech",
+    // Template: Spiderman Pointing at Spiderman
+    img: "data:image/jpeg;base64,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",
+  },
+  {
+    id: 45,
+    title: "The feeling after the first bite of Mutura.",
+    category: "Culture/Food",
+    // Template: Salt Bae (for exaggerated pleasure/perfection)
+    img: "data:image/png;base64,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",
+  },
+  {
+    id: 46,
+    title: "When your Kenyan relative calls you 'my daughter's friend'.",
+    category: "Family/Identity",
+    // Template: Confused Nick Young
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_0gaW-JOB42i3xjhA8jTWzj-Py1k3JshDCg&s",
+  },
+  
+  {
+    id: 11,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxB4pBGMLLXRuqIMe1liqPVIr-pa9wg4YoWQ&s",
+    category: "Kenyan Food",
+  },
+  {
+    id: 12,
+    title: "A",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2W-FC0U7fzR3eHuktZddRidfh-Yxjjn-Qrw&s",
+    category: "Kenyan Food",
+  },
+
+  {
+    id: 13,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0AZoJVo7G2rzLeLoRRs9_j1ztuTCBR5wvbw&s",
+    category: "Work Life",
+  },
+  {
+    id: 14,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqC7AHBBy5Y3kZ-Ajn4batgf_8PJfOCiwCKg&s",
+    category: "Work Life",
+  },
+  {
+    id: 15,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzalWHzWE4L7lPIIOf07Z-oiFdw-aPNkH4sw&s",
+    category: "Work Life",
+  },
+  {
+    id: 16,
+    title: "Office Gossip Team",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKCjHs30lssJmuVD0SeCRzPipWrp2iZfnEnA&s",
+    category: "Work Life",
+  },
+
+  {
+    id: 17,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvc8si8FKyOymQ_X7vN6k9RcjQiwu8ch5w5g&s",
+    category: "Sports",
+  },
+  {
+    id: 18,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz6Pz-8Bou_dD6frwEio1p6K_euPufQKVLSQ&s",
+    category: "Sports",
+  },
+  {
+    id: 19,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGZwPMxmc58IqSecag-_lNTIE6_vUynjUXuA&s",
+    category: "Sports",
+  },
+  {
+    id: 20,
+    title: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTecMqzmyIN6Ph8ZNs_0soterPwmsE8dTWkpg&s",
+    category: "Sports",
+  },
+];
+
+
+
+export default memes;

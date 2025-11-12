@@ -1,0 +1,180 @@
+/* App.css */
+
+/* ================= Header ================= */
+header {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 1rem 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: #e0e7ff;
+}
+
+/* ================= Meme Form ================= */
+.meme-form {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.meme-form:hover {
+  transform: scale(1.02);
+}
+
+.meme-form input[type="text"] {
+  border: 1px solid #cbd5e1; /* Tailwind slate-300 */
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  outline: none;
+  flex: 1 1 200px;
+}
+
+.meme-form input[type="text"]:focus {
+  border-color: #4f46e5; /* Tailwind indigo-600 */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.meme-form button {
+  background-color: #4f46e5; /* Tailwind indigo-600 */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.meme-form button:hover {
+  transform: scale(1.05);
+  background-color: #4338ca; /* Darker indigo */
+}
+
+/* ================= Meme Grid ================= */
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .meme-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .meme-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================= Meme Card ================= */
+.meme-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.meme-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= Meme Image ================= */
+.meme-card img {
+  width: 100%;
+  height: 200px; /* fixed height for grid consistency */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.meme-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= Meme Caption ================= */
+.meme-caption {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937; /* Tailwind gray-800 */
+  margin: 0.5rem 0;
+  padding: 0 0.5rem;
+}
+
+/* ================= Buttons ================= */
+.meme-card button {
+  flex: 1;
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.meme-card button:hover {
+  transform: scale(1.05);
+}
+
+.meme-card button:first-child {
+  background-color: #ec4899; /* pink-500 */
+  color: white;
+}
+
+.meme-card button:first-child:hover {
+  background-color: #db2777; /* pink-600 */
+}
+
+.meme-card button:last-child {
+  background-color: #3b82f6; /* blue-500 */
+  color: white;
+}
+
+.meme-card button:last-child:hover {
+  background-color: #2563eb; /* blue-600 */
+}
+
+/* ================= Utility ================= */
+.flex {
+  display: flex;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
