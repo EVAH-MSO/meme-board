@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "./MemeCard.css";
+import "./memeCard.css";
 
 export default function MemeCard({ meme }) {
   const [copied, setCopied] = useState(false);
